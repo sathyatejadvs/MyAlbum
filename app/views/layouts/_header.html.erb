@@ -1,8 +1,20 @@
-<% if user_signed_in? %>
-<%= current_user.email %>
-<%= link_to 'signout', destroy_user_session_path, method: :delete%>
-<% else %>
-<%= link_to 'Add Album', albums_path %>
-<%= link_to 'MyAlbums', albums_path%>
-<%= link_to 'Sign In', new_user_session_path%>
-<% end %>
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+
+		<ul class='nav navbar-nav'>
+			<li>	<%= link_to 'Add Album', new_album_path  %></li>
+			<li> <%= link_to 'My Album', albums_path %></li>
+		</ul>
+
+		<ul class="nav navbar-nav navbar-right">
+			<% if user_signed_in? %>
+				<li><a href=""><%=current_user.email %></a></li>
+				<li><%= link_to 'signout', destroy_user_session_path, method: :delete%></li>
+				<% else %>
+				<li><%= link_to 'Sign In', new_user_session_path %></li>
+				<% end %>
+			</ul>
+
+		</div>
+
+	</nav>

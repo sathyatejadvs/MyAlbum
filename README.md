@@ -1,24 +1,15 @@
-# README
+Create a Profile Page
+ -create a controller and action
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Implementing Haml-rails gem
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Implementing Validation
+ -Email (Type-String): must not be blank, uniq, format
+ -First Name (Type-String): must not be blank
+ -Last Name (Type-String): must not be blank
+ -Gender : must be filled
+ -Date of birth (Type-field): must not be blank, dd-mm--yyyy
+ -Address (Type-text) : must not be blank
+ -State (Type-field): must not be blank
+ -Pincode(Type-field: must be 6 digit
+ -City(Type-filed): must not be blank

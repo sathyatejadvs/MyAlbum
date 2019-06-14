@@ -16,9 +16,9 @@
       <tr>
         <td><%= album.title %></td>
         <td><%= album.description %></td>
-        <td><%= link_to 'Show', album %></td>
-        <td><%= link_to 'Edit', edit_album_path(album) %></td>
-        <td><%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="glyphicon glyphicon-folder-open"><%= link_to 'Show', album %></td>
+        <td class="glyphicon glyphicon-pencil"><%= link_to 'Edit', edit_album_path(album) %></td>
+        <td class="glyphicon glyphicon-trash"><%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

@@ -1,24 +1,20 @@
-# README
+1.create a profile page 
+- add fields to user model
+ -->first_name: String
+ -->last_name: String
+ -->gender: Integer
+ -->date_of_birth: date
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+2.Generate controller action for profile edit and show
 
-Things you may want to cover:
+3. Add a model address with the following fields
+ -->Adress: String
+ -->State: String
+ -->City: String
+ -->Pincode: Integer
 
-* Ruby version
+4. Add validation of above fields
 
-* System dependencies
 
-* Configuration
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

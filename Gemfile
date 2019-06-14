@@ -38,6 +38,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 #devise authentication
 gem 'devise'
+#For work more productive used haml gem
+gem 'haml-rails'
 
 #styling
 gem "twitter-bootstrap-rails"

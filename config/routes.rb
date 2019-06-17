@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'users/show'
+  get 'users/edit'
+  put 'users/update'
   resources :albums
   devise_for :users
   get 'home/index'

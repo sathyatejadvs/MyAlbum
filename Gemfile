@@ -38,7 +38,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 #devise authentication
 gem 'devise'
-#For work more productive used haml gem
+#haml gem to work more productive
 gem 'haml-rails'
 
 #styling

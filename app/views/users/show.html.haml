@@ -1,0 +1,30 @@
+%h1 MyProfile
+
+=link_to 'Edit', users_edit_path(@user.id), class: 'pull-right btn btn-danger glyphicon glyphicon-pencil'
+
+%p
+  %label First Name
+  = @user.first_name
+
+%p
+  %label Last Name
+  = @user.last_name
+
+%p
+  %label Gender
+  = @user.gender
+%p
+  %label Date Of Birth
+  = @user.date_of_birth
+
+%p
+  %label Address
+  -@user.addresses.each do |address_a|
+    %p
+      = address_a.address_line1
+    %p
+      = address_a.state
+    %p
+      = address_a.pincode
+    %p
+      = address_a.city

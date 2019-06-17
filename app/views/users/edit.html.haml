@@ -1,0 +1,50 @@
+%h1 Edit profile
+.field
+  = link_to 'BackToProfile',users_show_path(@user.id), class: 'pull-right btn btn-success glyphicon glyphicon-arrow-left'
+= form_for @user, url:'/users/update', html: {method: :put} do |f|
+  .field
+    = f.label :first_name
+    = f.text_field :first_name
+  .field
+    = f.label :last_name
+    = f.text_field :last_name
+  .form-group
+    = f.label :gender
+    .field
+      = f.label :gender, for: 'user_gender_male', class:'check-box-inline' do
+        = f.radio_button :gender, :male
+        Male
+    .field
+      = f.label :gender, for: 'user_gender_female', class:'check-box-inline' do
+        = f.radio_button :gender, :female
+        Female
+  .field
+    = f.label :date_of_birth
+    = f.date_select :date_of_birth
+
+  =f.fields_for :addresses do |address_f|
+    %hr
+    = address_f.hidden_field :id, value: address_f.object&.id
+    .field
+      = address_f.label :address_line1
+      = address_f.text_field :address_line1
+
+    .field
+      = address_f.label :state
+      = address_f.text_field :state
+
+    .field
+      = address_f.label :pincode
+      = address_f.text_field :pincode
+    .field
+      = address_f.label :city
+      = address_f.text_field :city
+    .field
+      = address_f.label :_destroy do
+        = address_f.check_box :_destroy
+        Destroy?
+    
+  .action
+    =f.submit 'save'
+
+

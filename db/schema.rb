@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_14_075844) do
+ActiveRecord::Schema.define(version: 2019_06_17_085546) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -33,6 +33,25 @@ ActiveRecord::Schema.define(version: 2019_06_14_075844) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "add_address_lines", force: :cascade do |t|
+    t.string "Address"
+    t.string "State"
+    t.integer "Pincode"
+    t.string "City"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "addresses", force: :cascade do |t|
+    t.string "address_line1"
+    t.string "state"
+    t.integer "pincode"
+    t.string "city"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+  end
+
   create_table "albums", force: :cascade do |t|
     t.string "title"
     t.text "description"
@@ -49,6 +68,10 @@ ActiveRecord::Schema.define(version: 2019_06_14_075844) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "first_name"
+    t.string "last_name"
+    t.integer "gender"
+    t.date "date_of_birth"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
